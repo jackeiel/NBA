@@ -1,0 +1,6 @@
+# files to ignore
+scrap.py
+
+.idea
+
+.DS_Store
