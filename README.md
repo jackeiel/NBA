@@ -10,6 +10,7 @@
 `>>> from predcitions.predictions import GamePredict`   
 `>>> GamePredict('DEN', 'IND').predict_spread()`   
 
+Output is in terms of the home team (i.e. prediction is DEN wins by 2.3)   
 `-->[-2.3]`   
 
 
