@@ -3,6 +3,9 @@
 *Project in progress*   
 *Updates coming soon*   
 
+Built off of swar's nba_api ([https://github.com/swar/nba_api])
+
+
 **Usage**  
 `$ pipenv install`   
 `$ pipenv shell`   
@@ -29,3 +32,5 @@ Output is in terms of the home team (i.e. prediction is DEN wins by 2.3)
     
     
     s
+
+[]: https://github.com/swar/nba_api
