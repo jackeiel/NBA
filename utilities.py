@@ -23,9 +23,9 @@ id_to_abrv = {1610612737: 'ATL', 1610612738: 'BOS', 1610612739: 'CLE', 161061274
               1610612761: 'TOR', 1610612762: 'UTA', 1610612763: 'MEM', 1610612764: 'WAS',
               1610612765: 'DET', 1610612766: 'CHA'}
 
-espn_to_api = {'SA': 'SAS', 'NO': 'NOP', 'NY': 'NYK', 'GS': 'GSW', 'UTAH': 'UTA'}
+espn_to_api = {'SA': 'SAS', 'NO': 'NOP', 'NY': 'NYK', 'GS': 'GSW', 'UTAH': 'UTA', 'WSH': 'WAS'}
 
-def get_lines(sportsbook='Caesars'):
+def get_lines(sportsbook='Caesars', display=False):
     '''
     Scrape current available NBA lines from http://www.espn.com/nba/lines.
     Typically only *today's* games
@@ -39,7 +39,7 @@ def get_lines(sportsbook='Caesars'):
 
     soup = BeautifulSoup(driver.page_source, 'html.parser')
 
-    table = soup.find('table', attrs={'class':'tablehead'})
+    table = soup.find('table', attrs={'class': 'tablehead'})
     rows = table.find_all('tr')
     book = [row for row in rows if row.find('td').text==sportsbook]
 
@@ -94,6 +94,10 @@ def get_lines(sportsbook='Caesars'):
     df.home_team.replace(city_to_abrv, inplace=True)
     df.away_team.replace(city_to_abrv, inplace=True)
     df.replace(espn_to_api, inplace=True)
+
+    if display:
+        print(df)
+
     return df
 
 def find_games(days_ahead=0):

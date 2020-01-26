@@ -42,13 +42,10 @@ def todays_bets(book='Caesars', threshold=4, display=True, save=True):
 
     full['bet'] = full.apply(place_bet, threshold=threshold, axis=1)
 
-    # full = full.drop('GAME_DATE_EST', axis=1)
-
     if display:
         print(full)
 
     if save:
-        # TODO simple date
         date = pd.Timestamp('today').date()
         full.to_csv(f'DATA/Predictions/{date}.csv')
 
