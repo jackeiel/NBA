@@ -5,6 +5,9 @@
 
 Built off of swar's nba_api ([1])
 
+**Command Line**
+`$ pipenv install`
+`$ python -m NBA todays_bets --display True --save False`
 
 **Usage**  
 `$ pipenv install`   
@@ -18,7 +21,7 @@ Output is in terms of the home team (i.e. prediction is DEN wins by 2.3)
 
 
 #### **TO DO**
-1. Command Line Interface
+1. ~~Command Line Interface~~
 2. Back test input generation method   
     Currently using rolling average from last 6 games
 3. ~~Scrape daily lines~~
