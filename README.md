@@ -1,13 +1,16 @@
 ## NBA Spread Predictions 
 
-*Project in progress*   
-*Updates coming soon*   
+An app for predicting the point spread for any given NBA basketball game.  
 
 Built off of swar's nba_api ([1])
 
+Occasional predictions found in DATA/Predictions. For predictions on today's games run below code:
+
 **Command Line**
 `$ pipenv install`
-`$ python -m NBA todays_bets --display True --save False`
+`$ python -m NBA todays_bets --display True --save False`  
+^^Incredibly slow due to how inputs to the model are currently being generated (i.e. many stats.nba api calls), see
+TO DO #6
 
 **Usage**  
 `$ pipenv install`   
@@ -27,6 +30,7 @@ Output is in terms of the home team (i.e. prediction is DEN wins by 2.3)
 3. ~~Scrape daily lines~~
 4. ~~Write bet algo~~
 5. Method for recording bets and results  
+6. Build database of past games and boxscores; configure methods to constantly update; will speed up prediction time
 
     
 
