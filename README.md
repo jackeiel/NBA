@@ -7,8 +7,8 @@ Built off of swar's nba_api ([1])
 Occasional predictions found in DATA/Predictions. For predictions on today's games run below code:
 
 **Command Line**
-`$ pipenv install`
-`$ python -m NBA todays_bets --display True --save False`  
+`$ pipenv install`  
+`$ python -m NBA todays_bets --display True --save False`    
 ^^Incredibly slow due to how inputs to the model are currently being generated (i.e. many stats.nba api calls), see
 TO DO #6
 
